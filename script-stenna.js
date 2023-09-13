@@ -51,25 +51,31 @@ window.addEventListener("DOMContentLoaded", (event) => {
   //MATCHMEDIA
   gsap.matchMediaRefresh();
 
-  // TEXT SPLIT ANIMATION
-let typeSplit;
-// Split the text up
-function runSplit() {
-  typeSplit = new SplitType("[text-split]", {
+
+// TEXT SPLIT ANIMATION
+  let typeSplit;
+
+  // Split the text up
+  function runSplit() {
+    typeSplit = new SplitType("[text-split]", {
       types: "words, chars, lines",
       tagName: "span"
-  });
-}
-runSplit();
-// Update on window resize
-let windowWidth = $(window).innerWidth();
-window.addEventListener("resize", function () {
-  if (windowWidth !== $(window).innerWidth()) {
-    windowWidth = $(window).innerWidth();
-    typeSplit.revert();
-    runSplit();
+    });
   }
-});
+  runSplit();
+
+  // Update on window resize
+  let windowWidth = window.innerWidth;
+
+  function checkWidth() {
+    if (windowWidth !== window.innerWidth) {
+      windowWidth = window.innerWidth;
+      typeSplit.revert();
+      runSplit();
+    }
+  }
+
+  window.addEventListener("resize", checkWidth);
 
     
     
