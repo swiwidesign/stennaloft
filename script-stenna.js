@@ -57,7 +57,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
 
   // Split the text up
   function runSplit() {
-    typeSplit = new SplitType("[text-split]", {
+    typeSplit = new SplitType(".heading-huge", {
       types: "words, chars, lines",
       tagName: "span"
     });
