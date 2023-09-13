@@ -1,5 +1,5 @@
 window.addEventListener("DOMContentLoaded", (event) => {
-    // LENIS
+    /*/ LENIS
     "use strict";
     if (Webflow.env("editor") === undefined) {
         const lenis = new Lenis({
@@ -44,6 +44,9 @@ window.addEventListener("DOMContentLoaded", (event) => {
         // Uncomment this if using GSAP ScrollTrigger
         connectToScrollTrigger();
     }
+    */
+    
+    
     gsap.registerPlugin(ScrollTrigger);
     //MATCHMEDIA
     gsap.matchMediaRefresh();
