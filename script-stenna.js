@@ -1,10 +1,10 @@
 window.addEventListener("DOMContentLoaded", (event) => {
-    /*/ LENIS
+    // LENIS
     "use strict";
     if (Webflow.env("editor") === undefined) {
         const lenis = new Lenis({
             duration: 1.2
-            , easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t))
+            , //easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t))
             , lerp: 0.1
             , wheelMultiplier: 0.7
             , infinite: false
@@ -44,12 +44,13 @@ window.addEventListener("DOMContentLoaded", (event) => {
         // Uncomment this if using GSAP ScrollTrigger
         connectToScrollTrigger();
     }
-    */
+    
     
     
     gsap.registerPlugin(ScrollTrigger);
     //MATCHMEDIA
     gsap.matchMediaRefresh();
+    
     // TEXT SPLIT ANIMATION
     let typeSplit;
     // Split the text up
