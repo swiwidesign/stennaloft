@@ -80,20 +80,20 @@ window.addEventListener("DOMContentLoaded", (event) => {
   // Intro
     
     //Intro all pages
-const elements = document.querySelectorAll(".char");
+let introstagger = document.querySelectorAll(".char");
 
 // Create a GSAP timeline
 const tl = gsap.timeline();
 
 // Initialize the starting position of the first element
-gsap.set(elements[0], { y: 0 });
+gsap.set(introstagger[0], { y: 0 });
 
 // Stagger the animation with a "staircase" effect
 for (let i = 1; i < elements.length; i++) {
   tl.from(
-    elements[i],
+    introstagger[i],
     0.5, // Animation duration
-    { y: i * 30, ease: "power2.out" }, // Initial position (y-axis) and ease
+    { y: i * "2em", ease: "power2.out" }, // Initial position (y-axis) and ease
     0 // No stagger delay
   );
 }
