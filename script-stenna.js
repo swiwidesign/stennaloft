@@ -81,23 +81,15 @@ window.addEventListener("DOMContentLoaded", (event) => {
     gsap.to(".hero_arrow", {
   scrollTrigger: 
         {
+            scrub: true,
             markers: true,
       trigger: ".background-color-primary",
-      start: "center bottom" // when the top of the trigger hits the top of the viewport
+      start: "center bottom", // when the top of the trigger hits the top of the viewport
+            end: "bottom bottom"
       },
   yPercent: -50,
         duration: 1
 });
-    
-     gsap.to(".hero_arrow", {
-  scrollTrigger: 
-        {
-      trigger: "[top]",
-      start: "center top" // when the top of the trigger hits the top of the viewport
-      },
-  rotation:0,
-         duration: 1,
-});
-  
+
   
 });
