@@ -82,8 +82,8 @@ window.addEventListener("DOMContentLoaded", (event) => {
   scrollTrigger: 
         {
       trigger: "[bottom]",
-      start: "bottom bottom", // when the top of the trigger hits the top of the viewport
-      }
+      start: "bottom bottom" // when the top of the trigger hits the top of the viewport
+      },
   rotation:180
 });
     
@@ -91,8 +91,8 @@ window.addEventListener("DOMContentLoaded", (event) => {
   scrollTrigger: 
         {
       trigger: "[top]",
-      start: "top top", // when the top of the trigger hits the top of the viewport
-      }
+      start: "top top" // when the top of the trigger hits the top of the viewport
+      },
   rotation:0
 });
   
