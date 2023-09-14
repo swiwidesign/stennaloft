@@ -85,21 +85,18 @@ const elements = document.querySelectorAll(".char");
 // Create a GSAP timeline
 const tl = gsap.timeline();
 
-// Stagger the initial animation on the y-axis
-tl.staggerFromTo(
-  elements,
-  0.5, // Animation duration
-  { y: -20 }, // Initial position (y-axis)
-  { y: 0, ease: "power2.out" }, // Final position (y-axis) and ease
-  0.2 // Stagger delay between each element
-);
+// Initialize the starting position of the first element
+gsap.set(elements[0], { y: 0 });
 
-// Move them all to the same final position
-tl.to(
-  elements,
-  0.5, // Animation duration
-  { y: 0, ease: "power2.out" } // Final position (y-axis) and ease
-);
+// Stagger the animation with a "staircase" effect
+for (let i = 1; i < elements.length; i++) {
+  tl.to(
+    elements[i],
+    0.5, // Animation duration
+    { y: i * 30, ease: "power2.out" }, // Initial position (y-axis) and ease
+    0 // No stagger delay
+  );
+}
   
   
 });
