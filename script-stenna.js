@@ -79,17 +79,16 @@ window.addEventListener("DOMContentLoaded", (event) => {
   // GENERAL CODE
   // Arrow
     gsap.to(".hero_arrow", {
-  scrollTrigger: 
-        {
+        scrollTrigger: {
             scrub: true,
             markers: true,
-      trigger: ".background-color-primary",
-      start: "center bottom", // when the top of the trigger hits the top of the viewport
+            trigger: ".background-color-primary",
+            start: "center bottom", // when the top of the trigger hits the top of the viewport
             end: "bottom bottom"
-      },
-  rotate: 180,
+        },
+        rotate: 180,
         duration: 1
-});
+    });
 
   
 });
