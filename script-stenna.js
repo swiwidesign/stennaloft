@@ -99,7 +99,7 @@ for (let i = 1; i < introstagger.length; i++) {
      .from("[stagger]", {
       yPercent: -20,
       duration: 0.8
-    }, <);
+    });
 }
   
   
