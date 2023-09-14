@@ -93,7 +93,10 @@ for (let i = 1; i < elements.length; i++) {
   tl.from(
     introstagger[i],
     0.5, // Animation duration
-    { y: i * "2em", ease: "power2.out" }, // Initial position (y-axis) and ease
+    { yPercent: i * 10, 
+      ease: "power2.out",
+      delay: 1
+    }, // Initial position (y-axis) and ease
     0 // No stagger delay
   );
 }
