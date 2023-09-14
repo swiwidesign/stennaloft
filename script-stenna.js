@@ -84,7 +84,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
       trigger: ".background-color-primary",
       start: "center bottom" // when the top of the trigger hits the top of the viewport
       },
-  rotation:180,
+  yPercent: -50,
         duration: 1
 });
     
