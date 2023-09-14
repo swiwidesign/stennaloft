@@ -92,8 +92,8 @@ gsap.set(introstagger[0], { y: 0 });
 for (let i = 1; i < introstagger.length; i++) {
   tl.from(
     introstagger[i],
-    0.5, // Animation duration
-    { yPercent: i * 20, opacity: 0, ease: "power2.out", delay: 1 }, // Initial position (y-axis) and ease
+    1, // Animation duration
+    { yPercent: i * 20, ease: "power2.out", delay: 1 }, // Initial position (y-axis) and ease
     0 // No stagger delay
   );
 }
