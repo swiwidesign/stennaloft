@@ -81,7 +81,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
     gsap.to(".hero_arrow", {
         scrollTrigger: {
             scrub: true,
-            markers: true,
+            markers: false,
             trigger: ".background-color-primary",
             start: "center bottom", // when the top of the trigger hits the top of the viewport
             end: "bottom bottom"
