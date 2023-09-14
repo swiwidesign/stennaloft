@@ -80,15 +80,26 @@ window.addEventListener("DOMContentLoaded", (event) => {
   // Intro
     
     //Intro all pages
-  let tlintro = gsap
-    .timeline({
-      delay: 0.4,
-      ease: Power4.easeOut
-    })
-    .from(".char", {
-      scale: 0.75,
-      duration: 1,
-    stagger: 0.3})
+const elements = document.querySelectorAll(".char");
+
+// Create a GSAP timeline
+const tl = gsap.timeline();
+
+// Stagger the initial animation on the y-axis
+tl.staggerFromTo(
+  elements,
+  0.5, // Animation duration
+  { y: -20 }, // Initial position (y-axis)
+  { y: 0, ease: "power2.out" }, // Final position (y-axis) and ease
+  0.2 // Stagger delay between each element
+);
+
+// Move them all to the same final position
+tl.to(
+  elements,
+  0.5, // Animation duration
+  { y: 0, ease: "power2.out" } // Final position (y-axis) and ease
+);
   
   
 });
