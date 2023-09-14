@@ -78,4 +78,19 @@ function checkWidth() {
 window.addEventListener("resize", checkWidth);
 
     // GENERAL CODE
+    //intro
+    
+    $("[stagger]").each(function (index) {
+          let listOne = $(this).find(
+            ".char"
+          );
+          
+    
+    let tlintro = gsap.timeline();
+          tl.to(listOne, {
+            translateY: "-100%",
+            stagger: { each: 0.02 },
+            ease: "power3.out",
+            duration: 0.4
+          });
 });
