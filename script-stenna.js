@@ -77,31 +77,24 @@ window.addEventListener("DOMContentLoaded", (event) => {
   window.addEventListener("resize", checkWidth);
 
   // GENERAL CODE
-  // Intro
+  // Arrow
+    gsap.to(".hero_arrow", {
+  scrollTrigger: 
+        {
+      trigger: "[bottom]",
+      start: "bottom bottom", // when the top of the trigger hits the top of the viewport
+      }
+  rotation:180
+});
     
-// Intro all pages
-let introstagger = document.querySelectorAll(".char");
-
-// Create a GSAP timeline
-const tlintro = gsap.timeline();
-
-// Set the initial stage for each element
-for (let i = 0; i < introstagger.length; i++) {
-  gsap.set(introstagger[i], { yPercent: i * 20 }); // Initial position (y-axis)
-}
-
-// Stagger the animation with a "staircase" effect
-for (let i = 0; i < introstagger.length; i++) {
-  gsap.to(
-    introstagger[i],
-    {
-      duration: 1, // Animation duration (1 second)
-      yPercent: 0, // Target position (y-axis) relative to the initial state
-      delay: 0.4,
-      ease: "power2.out",
-    }
-  );
-}
+     gsap.to(".hero_arrow", {
+  scrollTrigger: 
+        {
+      trigger: "[top]",
+      start: "top top", // when the top of the trigger hits the top of the viewport
+      }
+  rotation:0
+});
   
   
 });
