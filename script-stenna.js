@@ -83,13 +83,12 @@ window.addEventListener("DOMContentLoaded", (event) => {
 
   
  
-   $("[stagger]").each(function (index) {
-  let listOne = $(this).find(".char");
+
 
   // Button Timeline
 
-  let tl = gsap.timeline({ paused: true });
-  tl.to(listOne, {
+  let tl = gsap.timeline();
+  tl.to("[stagger] .char", {
     translateY: "-100%",
     stagger: { each: 0.02 },
     ease: "power3.out",
