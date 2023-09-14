@@ -77,7 +77,18 @@ window.addEventListener("DOMContentLoaded", (event) => {
   window.addEventListener("resize", checkWidth);
 
   // GENERAL CODE
-  // parallax
+  // Intro
+    
+    //Intro all pages
+  let tlintro = gsap
+    .timeline({
+      delay: 0.4,
+      ease: Power4.easeOut
+    })
+    .from(".char", {
+      scale: 0.75,
+      duration: 1
+    })
   
   
 });
