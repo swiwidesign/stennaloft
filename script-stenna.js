@@ -87,7 +87,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
       start: "center bottom", // when the top of the trigger hits the top of the viewport
             end: "bottom bottom"
       },
-  yPercent: -50,
+  rotate: 180,
         duration: 1
 });
 
