@@ -79,27 +79,27 @@ window.addEventListener("DOMContentLoaded", (event) => {
   // GENERAL CODE
   // Intro
     
-    //Intro all pages
+// Intro all pages
 let introstagger = document.querySelectorAll(".char");
 
 // Create a GSAP timeline
 const tlintro = gsap.timeline();
 
-// Initialize the starting position of the first element
-gsap.set(introstagger[0], { y: 0 });
+// Set the initial stage for each element
+for (let i = 0; i < introstagger.length; i++) {
+  gsap.set(introstagger[i], { yPercent: i * 20 }); // Initial position (y-axis)
+}
 
 // Stagger the animation with a "staircase" effect
-for (let i = 1; i < introstagger.length; i++) {
-  tlintro.from(
+for (let i = 0; i < introstagger.length; i++) {
+  gsap.to(
     introstagger[i],
-    1, // Animation duration
-    { yPercent: i * 20, ease: "power2.out", delay: 1 }, // Initial position (y-axis) and ease
-    0.2 // No stagger delay
-  )
-     .from("[stagger]", {
-      yPercent: -20,
-      duration: 0.8
-    });
+    {
+      duration: 1, // Animation duration (1 second)
+      yPercent: 0, // Target position (y-axis) relative to the initial state
+      ease: "power2.out",
+    }
+  );
 }
   
   
