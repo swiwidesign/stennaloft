@@ -82,18 +82,20 @@ window.addEventListener("DOMContentLoaded", (event) => {
   scrollTrigger: 
         {
       trigger: "[bottom]",
-      start: "bottom bottom" // when the top of the trigger hits the top of the viewport
+      start: "center bottom" // when the top of the trigger hits the top of the viewport
       },
-  rotation:180
+  rotation:180,
+        duration: 1
 });
     
      gsap.to(".hero_arrow", {
   scrollTrigger: 
         {
       trigger: "[top]",
-      start: "top top" // when the top of the trigger hits the top of the viewport
+      start: "center top" // when the top of the trigger hits the top of the viewport
       },
-  rotation:0
+  rotation:0,
+         duration: 1,
 });
   
   
