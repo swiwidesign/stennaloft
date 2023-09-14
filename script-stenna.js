@@ -87,8 +87,8 @@ window.addEventListener("DOMContentLoaded", (event) => {
     })
     .from(".char", {
       scale: 0.75,
-      duration: 1
-    })
+      duration: 1,
+    stagger: 0.3})
   
   
 });
