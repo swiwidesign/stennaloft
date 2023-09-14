@@ -89,18 +89,18 @@ const tlintro = gsap.timeline();
 gsap.set(introstagger[0], { y: 0 });
 
 // Stagger the animation with a "staircase" effect
-let i = 1; i < introstagger.length; i++) 
+for (let i = 1; i < introstagger.length; i++) {
   tlintro.from(
     introstagger[i],
     1, // Animation duration
     { yPercent: i * 20, ease: "power2.out", delay: 1 }, // Initial position (y-axis) and ease
-    0 // No stagger delay
+    0.2 // No stagger delay
   )
      .from("[stagger]", {
       yPercent: -20,
       duration: 0.8
     });
-
+}
   
   
 });
