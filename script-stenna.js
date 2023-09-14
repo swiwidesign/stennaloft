@@ -97,6 +97,7 @@ for (let i = 0; i < introstagger.length; i++) {
     {
       duration: 1, // Animation duration (1 second)
       yPercent: 0, // Target position (y-axis) relative to the initial state
+      delay: 0.4,
       ease: "power2.out",
     }
   );
