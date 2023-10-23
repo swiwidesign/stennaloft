@@ -92,7 +92,7 @@ triggers.forEach((trigger) => {
       start: "bottom bottom",
       end: "bottom top",
     },
-    backgroundColor: "white",
+    backgroundColor: "#ffff",
     duration: 1,
   });
 });
