@@ -68,7 +68,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
 
 document.querySelectorAll('[colourchange]').forEach(function (triggerElement) {
   gsap.fromTo(
-    '.page_wrap',
+    ".page_wrap",
     {
       backgroundColor: gsap.getProperty('html', '--color--light'),
     },
@@ -85,15 +85,14 @@ document.querySelectorAll('[colourchange]').forEach(function (triggerElement) {
 });
     
     
- document.querySelectorAll('[colourchangeback]').forEach(function (triggerElement) {
-  gsap.fromTo(
-    '.page_wrap',
+ gsap.fromTo(
+    ".page_wrap",
     {
       backgroundColor: gsap.getProperty('html', '--color--prime'),
     },
     {
       scrollTrigger: {
-        trigger: triggerElement,
+        trigger: "[colourchangeback]",
         scrub: true,
         start: 'top bottom',
         end: 'top center',
@@ -101,7 +100,7 @@ document.querySelectorAll('[colourchange]').forEach(function (triggerElement) {
       backgroundColor: gsap.getProperty('html', '--color--light'),
     }
   );
-});
+
        
     
   
