@@ -110,6 +110,53 @@ $("[colourchangeback]").each(function (index, trigger) {
 
     
     
+    $("[colourchange]").each(function (index) {
+  let triggerElement = $(this);
+  let targetElement = $("body");
+
+  gsap.fromTo(targetElement, {
+    scrollTrigger: {
+      scrub: true,
+      markers: false,
+      trigger: triggerElement, // Use the current trigger element
+      start: "top center",
+      end: "top top"
+    },
+    backgroundColor: "#ffff", // Starting color (change to the desired initial color)
+    duration: 1
+  }, {
+    backgroundColor: "#ccd1b2", // Ending color
+    duration: 1
+  });
+});
+
+// Dark to Light Color Change
+$("[colourchange]").each(function (index) {
+  let triggerElement = $(this);
+  let targetElement = $("body");
+
+  gsap.fromTo(targetElement, {
+    scrollTrigger: {
+      scrub: true,
+      markers: false,
+      trigger: triggerElement, // Use the current trigger element
+      start: "bottom center",
+      end: "bottom top"
+    },
+    backgroundColor: "#ccd1b2", // Starting color (change to the desired initial color)
+    duration: 1
+  }, {
+    backgroundColor: "#ffff", // Ending color
+    duration: 1
+  });
+});
+    
+    
+    
+    
+    
+    
+    
 
 
   
