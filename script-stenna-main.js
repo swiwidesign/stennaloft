@@ -86,13 +86,19 @@ $("[colourchange]").each(function (index, trigger) {
   });
     
     
-    gsap.fromTo(".page_wrap", {
+    
+    
+});
+
+// Dark to Light Color Change
+$("[colourchangeback]").each(function (index, trigger) {
+  gsap.fromTo(".page_wrap", {
     scrollTrigger: {
       scrub: true,
       markers: false,
       trigger: trigger, // Use the current trigger element
-      start: "top top",
-      end: "bottom top"
+      start: "top center",
+      end: "top top"
     },
     backgroundColor: "#ccd1b2", // Starting color (change to the desired initial color)
     duration: 1
@@ -100,8 +106,8 @@ $("[colourchange]").each(function (index, trigger) {
     backgroundColor: "#ffff", // Ending color
     duration: 1
   });
-    
 });
+
     
     
 
