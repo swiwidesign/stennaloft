@@ -102,7 +102,6 @@ document.querySelectorAll('[colourchange]').forEach(function (triggerElement) {
   );
 });
        
-    gsap.set(".class", { backgroundColor: gsap.getProperty('html', '--color--light')});
 
   
 });
