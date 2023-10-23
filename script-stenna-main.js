@@ -76,9 +76,7 @@ gsap.to(".arrow-down", {
   rotate: 180,
   duration: 1,
 });
-
-
-    
+ 
    
 
 document.querySelectorAll('[colourchange]').forEach(function (triggerElement) {
