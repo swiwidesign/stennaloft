@@ -51,32 +51,24 @@ window.addEventListener("DOMContentLoaded", (event) => {
  
   // GENERAL CODE
   // Arrow
-// Function to handle the arrow click event
-function handleArrowClick() {
-  // Scroll to the top of the page when the arrow is clicked
-  window.scrollTo({
-    top: 0,
-    behavior: "smooth",
-  });
-
-  // Set the cursor back to "auto" after the arrow is clicked
-  const arrow = document.querySelector(".arrow-down");
-  arrow.style.cursor = "auto";
-}
-
-// Create the ScrollTrigger animation
 gsap.to(".arrow-down", {
   scrollTrigger: {
     scrub: true,
     markers: false,
     trigger: ".is-footer",
-    start: "center bottom",
+    start: "center bottom", // when the top of the trigger hits the top of the viewport
     end: "clamp(bottom bottom)",
     onComplete: function () {
       // When the animation is complete, make the arrow clickable
       const arrow = document.querySelector(".arrow-down");
       arrow.style.cursor = "pointer";
-      arrow.addEventListener("click", handleArrowClick);
+      arrow.addEventListener("click", function () {
+        // Scroll to the top of the page when the arrow is clicked
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
+      });
     },
   },
   rotate: 180,
