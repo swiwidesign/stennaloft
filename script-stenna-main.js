@@ -78,7 +78,7 @@ document.querySelectorAll('[colourchange]').forEach(function (triggerElement) {
   });
 
   tl.fromTo(
-    targetElement.style,
+    targetElement,
     {
       backgroundColor: '#ffffff',
       duration: 1,
@@ -104,7 +104,7 @@ document.querySelectorAll('[colourchangeback]').forEach(function (triggerElement
   });
 
   tl.fromTo(
-    targetElement.style,
+    targetElement,
     {
       backgroundColor: '#ccd1b2',
       duration: 1,
