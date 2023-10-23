@@ -89,7 +89,7 @@ document.querySelectorAll('[colourchange]').forEach(function (triggerElement) {
     },
   });
 
-  tl.to('.page_wrap', {
+  tl.to('body', {
     backgroundColor: gsap.getProperty('html', '--color--prime'),
   });
 });
@@ -104,7 +104,7 @@ document.querySelectorAll('[colourchangeback]').forEach(function (triggerElement
     },
   });
 
-  tl.to('.page_wrap', {
+  tl.to('body', {
     backgroundColor: gsap.getProperty('html', '--color--light'),
   });
 });
