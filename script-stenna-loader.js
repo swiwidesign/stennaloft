@@ -2,8 +2,8 @@
 // Code that runs on pageload
 window.onload = function() {
   gsap.to(".loader", {
-    xPercent: -100,
-    duration: 2,
+    yPercent: -100,
+    duration: 1,
     onComplete: () => {
       gsap.set(".loader", { display: "none" });
     }
