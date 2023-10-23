@@ -85,5 +85,24 @@ document.querySelectorAll('[colourchange]').forEach(function (triggerElement) {
 });
     
     
+ document.querySelectorAll('[colourchangeback]').forEach(function (triggerElement) {
+  gsap.fromTo(
+    '.page_wrap',
+    {
+      backgroundColor: gsap.getProperty('html', '--color--prime'),
+    },
+    {
+      scrollTrigger: {
+        trigger: triggerElement,
+        scrub: true,
+        start: 'top bottom',
+        end: 'top center',
+      },
+      backgroundColor: gsap.getProperty('html', '--color--light'),
+    }
+  );
+});
+       
+    
   
 });
