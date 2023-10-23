@@ -84,18 +84,18 @@ $("[colourchange]").each(function (index, trigger) {
 });
 
 // Dark to Light Color Change
-$("[colourchangeback]").each(function (index, trigger) {
+$("[colourchange]").each(function (index, trigger) {
   gsap.fromTo("body", {
     scrollTrigger: {
       scrub: true,
       markers: false,
       trigger: trigger, // Use the current trigger element
-      start: "top center",
-      end: "top top"
+      start: "bottom center",
+      end: "bottom top"
     },
     backgroundColor: "#ccd1b2",
     duration: 1
-  }, { backgroundColor: "#ffffff" });
+  }, { backgroundColor: "#ffffff", duration: 1 });
 });
 
     
