@@ -74,7 +74,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
             start: "top bottom", 
             end: "bottom bottom"
         },
-        backgroundColor: "red",
+        backgroundColor: "#ccd1b2",
         duration: 1
     });
     
@@ -86,7 +86,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
             start: "bottom center", 
             end: "bottom top"
         },
-        backgroundColor: "green",
+        backgroundColor: "white",
         duration: 1
     });
 
