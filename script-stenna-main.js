@@ -66,42 +66,35 @@ window.addEventListener("DOMContentLoaded", (event) => {
    
 
 document.querySelectorAll('[colourchange]').forEach(function (triggerElement) {
-  gsap.fromTo(
-    '.page_wrap',
-    {
-      backgroundColor: gsap.getProperty('html', '--color--light'),
+  let tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: triggerElement,
+      scrub: true,
+      start: 'top bottom',
+      end: 'bottom bottom',
     },
-    {
-      scrollTrigger: {
-        trigger: triggerElement,
-        scrub: true,
-        start: 'top bottom',
-        end: 'bottom bottom',
-      },
-      backgroundColor: gsap.getProperty('html', '--color--prime'),
-    }
-  );
+  });
+
+  tl.to('.page_wrap', {
+    backgroundColor: gsap.getProperty('html', '--color--prime'),
+  });
 });
-    
-    
- document.querySelectorAll('[colourchangeback]').forEach(function (triggerElement) {
-  gsap.fromTo(
-    '.page_wrap',
-    {
-      backgroundColor: gsap.getProperty('html', '--color--prime'),
+
+document.querySelectorAll('[colourchangeback]').forEach(function (triggerElement) {
+  let tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: triggerElement,
+      scrub: true,
+      start: 'top bottom',
+      end: 'top center',
     },
-    {
-      scrollTrigger: {
-        trigger: triggerElement,
-        scrub: true,
-        start: 'top bottom',
-        end: 'top center',
-      },
-      backgroundColor: gsap.getProperty('html', '--color--light'),
-    }
-  );
+  });
+
+  tl.to('.page_wrap', {
+    backgroundColor: gsap.getProperty('html', '--color--light'),
+  });
 });
-       
+  
 
   
 });
