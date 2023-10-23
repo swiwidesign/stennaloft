@@ -58,7 +58,7 @@ gsap.to(".arrow-down", {
     trigger: ".is-footer",
     start: "center bottom",
     end: "bottom bottom",
-    onComplete: function () {
+    onStart: function () {
       const arrow = document.querySelector(".arrow-down");
       arrow.style.cursor = "pointer";
       arrow.addEventListener("click", function () {
