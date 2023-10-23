@@ -70,7 +70,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
 
     
 $("[colourchange]").each(function (index, trigger) {
-  gsap.to(".page_wrap", {
+  gsap.to("body", {
     scrollTrigger: {
       scrub: true,
       markers: false,
@@ -85,7 +85,7 @@ $("[colourchange]").each(function (index, trigger) {
 
 // Dark to Light Color Change
 $("[colourchangeback]").each(function (index, trigger) {
-  gsap.to(".page_wrap", {
+  gsap.to("body", {
     scrollTrigger: {
       scrub: true,
       markers: false,
