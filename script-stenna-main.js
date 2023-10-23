@@ -11,8 +11,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
       infinite: false,
       gestureOrientation: "vertical",
       normalizeWheel: false,
-      smoothTouch: false,
-        resize: true
+      smoothTouch: false
     });
 
     function raf(time) {
@@ -21,6 +20,9 @@ window.addEventListener("DOMContentLoaded", (event) => {
     }
     requestAnimationFrame(raf);
 
+      $("[data-lenis-resize]").on("click", function () {
+      lenis.resize();
+    });
     $("[data-lenis-start]").on("click", function () {
       lenis.start();
     });
