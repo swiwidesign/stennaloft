@@ -67,6 +67,8 @@ window.addEventListener("DOMContentLoaded", (event) => {
     });
     
     
+
+    
 $("[colourchange]").each(function (index, trigger) {
   gsap.to(".page_wrap", {
     scrollTrigger: {
@@ -83,7 +85,7 @@ $("[colourchange]").each(function (index, trigger) {
 
 // Dark to Light Color Change
 $("[colourchangeback]").each(function (index, trigger) {
-  gsap.to(".page_wrap", {
+  gsap.fromTo(".page_wrap", {
     scrollTrigger: {
       scrub: true,
       markers: false,
@@ -91,7 +93,10 @@ $("[colourchangeback]").each(function (index, trigger) {
       start: "top center",
       end: "top top"
     },
-    backgroundColor: "#ffff",
+    backgroundColor: "#ccd1b2", // Starting color (change to the desired initial color)
+    duration: 1
+  }, {
+    backgroundColor: "#ffff", // Ending color
     duration: 1
   });
 });
