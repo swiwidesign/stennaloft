@@ -66,25 +66,39 @@ window.addEventListener("DOMContentLoaded", (event) => {
         duration: 1
     });
     
-    // Define an array of trigger elements with the class "colourchange"
-const triggers = document.querySelectorAll("[colourchange]");
-
-// Loop through each trigger element
-triggers.forEach((trigger) => {
-  // Define the GSAP animation for each trigger
+    
+$("[colourchange]").each(function (index, trigger) {
   gsap.to(".page_wrap", {
     scrollTrigger: {
-      scrub: 2,
+      scrub: true,
       markers: false,
       trigger: trigger, // Use the current trigger element
       start: "top bottom",
-      end: "bottom bottom",
+      end: "bottom bottom"
     },
     backgroundColor: "#ccd1b2",
-    duration: 1,
+    duration: 1
   });
 });
+
+// Dark to Light Color Change
+$("[colourchangeback]").each(function (index, trigger) {
+  gsap.to(".page_wrap", {
+    scrollTrigger: {
+      scrub: true,
+      markers: false,
+      trigger: trigger, // Use the current trigger element
+      start: "top bottom",
+      end: "top center"
+    },
+    backgroundColor: "#fff",
+    duration: 1
+  });
+});
+});
     
+    
+
 
   
 });
