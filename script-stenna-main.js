@@ -81,7 +81,7 @@ $("[colourchange]").each(function (index) {
       trigger: triggerElement,
       // trigger element - viewport
       // can also use "20px 80%"
-      start: "top top",
+      start: "top bottom",
       end: "bottom bottom",
       scrub: 1
     }
