@@ -70,7 +70,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
         scrollTrigger: {
             scrub: true,
             markers: false,
-            trigger: "[data-lenis-start]",
+            trigger: "[colourchange]",
             start: "top bottom", 
             end: "bottom bottom"
         },
