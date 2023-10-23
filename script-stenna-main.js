@@ -54,7 +54,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
  
   // GENERAL CODE
   // Arrow
-    gsap.to(".hero_arrow", {
+    gsap.to(".arrow-down", {
         scrollTrigger: {
             scrub: true,
             markers: false,
