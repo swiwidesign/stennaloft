@@ -58,7 +58,7 @@ gsap.to(".arrow-down", {
     trigger: ".is-footer",
     start: "center bottom", // when the top of the trigger hits the top of the viewport
     end: "clamp(bottom bottom)",
-    onStart: function () {
+    onComplete: function () {
       // When the animation is complete, make the arrow clickable
       const arrow = document.querySelector(".arrow-down");
       arrow.style.cursor = "pointer";
