@@ -70,7 +70,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
 
     gsap.set("body", { backgroundColor: "#ffffff" });
 // Dark to Light Color Change
-$("[colourchange]").each(function (index) {
+$(".is-bg").each(function (index) {
   let triggerElement = $(this);
   let targetElement = $("body");
 
