@@ -74,7 +74,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
             start: "top bottom", 
             end: "bottom bottom"
         },
-        color: "red",
+        backgroundColor: "red",
         duration: 1
     });
 
