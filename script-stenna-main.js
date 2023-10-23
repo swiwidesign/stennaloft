@@ -51,17 +51,31 @@ window.addEventListener("DOMContentLoaded", (event) => {
  
   // GENERAL CODE
   // Arrow
-    gsap.to(".arrow-down", {
-        scrollTrigger: {
-            scrub: true,
-            markers: false,
-            trigger: ".is-footer",
-            start: "center bottom", // when the top of the trigger hits the top of the viewport
-            end: "bottom bottom"
-        },
-        rotate: 180,
-        duration: 1
-    });
+  gsap.to(".arrow-down", {
+  scrollTrigger: {
+    scrub: true,
+    markers: false,
+    trigger: ".is-footer",
+    start: "center bottom", // when the top of the trigger hits the top of the viewport
+    end: "bottom bottom",
+    onToggle: function (trigger) {
+      if (trigger.isActive) {
+        // Animation is active, make the arrow clickable
+        const arrow = document.querySelector(".arrow-down");
+        arrow.style.cursor = "pointer";
+        arrow.addEventListener("click", function () {
+          // Scroll to the top of the page when the arrow is clicked
+          window.scrollTo({
+            top: 0,
+            behavior: "smooth",
+          });
+        });
+      }
+    },
+  },
+  rotate: 180,
+  duration: 1,
+});
     
    
 
