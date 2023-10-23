@@ -74,7 +74,7 @@ triggers.forEach((trigger) => {
   // Define the GSAP animation for each trigger
   gsap.to(".page_wrap", {
     scrollTrigger: {
-      scrub: true,
+      scrub: 2,
       markers: false,
       trigger: trigger, // Use the current trigger element
       start: "top bottom",
@@ -86,10 +86,10 @@ triggers.forEach((trigger) => {
 
   gsap.to(".page_wrap", {
     scrollTrigger: {
-      scrub: true,
+      scrub: 2,
       markers: false,
       trigger: trigger, // Use the current trigger element
-      start: "bottom center",
+      start: "bottom bottom",
       end: "bottom top",
     },
     backgroundColor: "white",
