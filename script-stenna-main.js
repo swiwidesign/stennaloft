@@ -85,27 +85,6 @@ triggers.forEach((trigger) => {
   });
 });
     
-    // Loop through each trigger element
-triggers.forEach((trigger) => {
-  // Define the GSAP animation for each trigger
-  gsap.to(".page_wrap", {
-    scrollTrigger: {
-      scrub: 2,
-      markers: false,
-      trigger: trigger, // Use the current trigger element
-      start: "bottom bottom",
-      end: "bottom top",
-    },
-    backgroundColor: "#ffff",
-    duration: 1,
-  });
-    
-});
-    
-   
-    
-    
-    
 
   
 });
