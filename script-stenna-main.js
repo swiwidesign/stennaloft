@@ -63,21 +63,26 @@ window.addEventListener("DOMContentLoaded", (event) => {
         duration: 1
     });
     
+
     
-gsap.fromTo( ".page_wrap", {
-	backgroundColor: gsap.getProperty("html", "--color--light")
-}, {
-	scrollTrigger: {
-		trigger: "[colourchange]",
-		scrub: true,
-		start: "top bottom",
-        end: "bottom bottom",
-	},
-	backgroundColor: gsap.getProperty("html", "--color--prime")
+
+document.querySelectorAll('[colourchange]').forEach(function (triggerElement) {
+  gsap.fromTo(
+    '.page_wrap',
+    {
+      backgroundColor: gsap.getProperty('html', '--color--light'),
+    },
+    {
+      scrollTrigger: {
+        trigger: triggerElement,
+        scrub: true,
+        start: 'top bottom',
+        end: 'bottom bottom',
+      },
+      backgroundColor: gsap.getProperty('html', '--color--prime'),
+    }
+  );
 });
-    
-
-
     
     
   
