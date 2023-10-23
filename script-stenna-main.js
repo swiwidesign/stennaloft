@@ -89,7 +89,7 @@ $("[colourchange]").each(function (index) {
   tl.fromTo(
     targetElement,
     {
-      backgroundColor: "#ffffff",
+      backgroundColor: "#fffcfc",
       duration: 1
     },
     {
@@ -121,7 +121,7 @@ $("[colourchangeback]").each(function (index) {
       duration: 1
     },
     {
-      backgroundColor: "#ffffff",
+      backgroundColor: "#fffcfc",
       duration: 1
     }
   );
