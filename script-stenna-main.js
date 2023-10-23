@@ -83,7 +83,11 @@ triggers.forEach((trigger) => {
     backgroundColor: "#ccd1b2",
     duration: 1,
   });
-
+});
+    
+    // Loop through each trigger element
+triggers.forEach((trigger) => {
+  // Define the GSAP animation for each trigger
   gsap.to(".page_wrap", {
     scrollTrigger: {
       scrub: 2,
@@ -95,7 +99,13 @@ triggers.forEach((trigger) => {
     backgroundColor: "#ffff",
     duration: 1,
   });
+    
 });
+    
+   
+    
+    
+    
 
   
 });
