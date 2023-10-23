@@ -67,49 +67,67 @@ window.addEventListener("DOMContentLoaded", (event) => {
     });
     
     
-
     
-    $("[colourchange]").each(function (index) {
-  let triggerElement = $(this);
-  let targetElement = $("body");
-
-  gsap.fromTo(targetElement, {
-    scrollTrigger: {
-      scrub: true,
-      markers: false,
-      trigger: triggerElement, // Use the current trigger element
-      start: "top center",
-      end: "top top"
-    },
-    backgroundColor: "#ffff", // Starting color (change to the desired initial color)
-    duration: 1
-  }, {
-    backgroundColor: "#ccd1b2", // Ending color
-    duration: 1
-  });
-});
-
+    
+    
+    
 // Dark to Light Color Change
 $("[colourchange]").each(function (index) {
   let triggerElement = $(this);
   let targetElement = $("body");
 
-  gsap.fromTo(targetElement, {
+  let tl = gsap.timeline({
     scrollTrigger: {
-      scrub: true,
-      markers: false,
-      trigger: triggerElement, // Use the current trigger element
-      start: "bottom center",
-      end: "bottom top"
-    },
-    backgroundColor: "#ccd1b2", // Starting color (change to the desired initial color)
-    duration: 1
-  }, {
-    backgroundColor: "#ffff", // Ending color
-    duration: 1
+      trigger: triggerElement,
+      // trigger element - viewport
+      // can also use "20px 80%"
+      start: "top top",
+      end: "bottom bottom",
+      scrub: 1
+    }
   });
+  tl.fromTo(
+    targetElement,
+    {
+      backgroundColor: "#ffff",
+      duration: 1
+    },
+    {
+      backgroundColor: "#ccd1b2",
+      duration: 1
+    }
+  );
 });
     
+    // Dark to Light Color Change
+$("[colourchangeback]").each(function (index) {
+  let triggerElement = $(this);
+  let targetElement = $("body");
+
+  let tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: triggerElement,
+      // trigger element - viewport
+      // can also use "20px 80%"
+      start: "top bottom",
+      end: "top center",
+      scrub: 1
+    }
+  });
+  tl.fromTo(
+    targetElement,
+    {
+      backgroundColor: "#ccd1b2",
+      duration: 1
+    },
+    {
+      backgroundColor: "#ffff",
+      duration: 1
+    }
+  );
+});
+    
+
     
     
     
