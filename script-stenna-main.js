@@ -56,10 +56,9 @@ gsap.to(".arrow-down", {
     scrub: true,
     markers: false,
     trigger: ".is-footer",
-    start: "center bottom", // when the top of the trigger hits the top of the viewport
+    start: "center bottom",
     end: "bottom bottom",
     onComplete: function () {
-      // When the animation is complete, make the arrow clickable
       const arrow = document.querySelector(".arrow-down");
       arrow.style.cursor = "pointer";
       arrow.addEventListener("click", function () {
@@ -68,12 +67,16 @@ gsap.to(".arrow-down", {
           top: 0,
           behavior: "smooth",
         });
+
+        // Set the cursor back to "auto" after the arrow is clicked
+        arrow.style.cursor = "auto";
       });
     },
   },
   rotate: 180,
   duration: 1,
 });
+
 
     
    
