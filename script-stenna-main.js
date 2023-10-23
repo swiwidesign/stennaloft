@@ -62,11 +62,13 @@ window.addEventListener("DOMContentLoaded", (event) => {
         rotate: 180,
         duration: 1
     });
+  
     
+    let targetElement = document.querySelector('.page_wrap');  
     
 // Dark to Light Color Change
 document.querySelectorAll('[colourchange]').forEach(function (triggerElement) {
-  let targetElement = document.querySelector('.page_wrap');
+  
 
   let tl = gsap.timeline({
     scrollTrigger: {
@@ -92,7 +94,6 @@ document.querySelectorAll('[colourchange]').forEach(function (triggerElement) {
 
 // Dark to Light Color Change
 document.querySelectorAll('[colourchangeback]').forEach(function (triggerElement) {
-  let targetElement = document.querySelector('.page_wrap');
 
   let tl = gsap.timeline({
     scrollTrigger: {
