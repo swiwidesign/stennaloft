@@ -100,7 +100,7 @@ $(".is-bg").each(function (index) {
     // Dark to Light Color Change
 $("[colourchangeback]").each(function (index) {
   let triggerElement = $(this);
-  let targetElement = $("body");
+  let targetElement = $(".is-bg");
 
   let tl = gsap.timeline({
     scrollTrigger: {
