@@ -68,37 +68,32 @@ window.addEventListener("DOMContentLoaded", (event) => {
     
     
 
-// Dark to Light Color Change
+    
 $("[colourchange]").each(function (index, trigger) {
-  gsap.fromTo("body", {
+  gsap.to(".page_wrap", {
     scrollTrigger: {
       scrub: true,
       markers: false,
       trigger: trigger, // Use the current trigger element
       start: "top bottom",
-      end: "top top"
+      end: "bottom bottom"
     },
-    backgroundColor: "#ffffff", // Starting color (change to the desired initial color)
-    duration: 1
-  }, {
-    backgroundColor: "#ccd1b2", // Ending color
+    backgroundColor: "#ccd1b2",
     duration: 1
   });
 });
-    
-    $("[colourchangeback]").each(function (index, trigger) {
-  gsap.fromTo("body", {
+
+// Dark to Light Color Change
+$("[colourchangeback]").each(function (index, trigger) {
+  gsap.to(".page_wrap", {
     scrollTrigger: {
       scrub: true,
       markers: false,
       trigger: trigger, // Use the current trigger element
-      start: "top bottom",
+      start: "top center",
       end: "top top"
     },
-    backgroundColor: "#ccd1b2", // Starting color (change to the desired initial color)
-    duration: 1
-  }, {
-    backgroundColor: "#ffffff", // Ending color
+    backgroundColor: "#ffffff",
     duration: 1
   });
 });
