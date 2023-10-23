@@ -88,10 +88,10 @@ $("[colourchangeback]").each(function (index, trigger) {
       scrub: true,
       markers: false,
       trigger: trigger, // Use the current trigger element
-      start: "top bottom",
-      end: "top center"
+      start: "top center",
+      end: "top top"
     },
-    backgroundColor: "#fff",
+    backgroundColor: "#ffff",
     duration: 1
   });
 });
