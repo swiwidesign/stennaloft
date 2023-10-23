@@ -63,7 +63,6 @@ window.addEventListener("DOMContentLoaded", (event) => {
         duration: 1
     });
     
-gsap.set(".class", { backgroundColor: gsap.getProperty('html', '--color--light')});
    
 
 document.querySelectorAll('[colourchange]').forEach(function (triggerElement) {
@@ -103,6 +102,7 @@ document.querySelectorAll('[colourchange]').forEach(function (triggerElement) {
   );
 });
        
-    
+    gsap.set(".class", { backgroundColor: gsap.getProperty('html', '--color--light')});
+
   
 });
