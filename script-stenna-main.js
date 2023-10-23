@@ -74,7 +74,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
 // Dark to Light Color Change
 $("[colourchange]").each(function (index) {
   let triggerElement = $(this);
-  let targetElement = $(".page_wrap");
+  let targetElement = $("body");
 
   let tl = gsap.timeline({
     scrollTrigger: {
@@ -89,7 +89,7 @@ $("[colourchange]").each(function (index) {
   tl.fromTo(
     targetElement,
     {
-      backgroundColor: "#ffff",
+      backgroundColor: "#ffffff",
       duration: 1
     },
     {
@@ -102,7 +102,7 @@ $("[colourchange]").each(function (index) {
     // Dark to Light Color Change
 $("[colourchangeback]").each(function (index) {
   let triggerElement = $(this);
-  let targetElement = $(".page_wrap");
+  let targetElement = $("body");
 
   let tl = gsap.timeline({
     scrollTrigger: {
@@ -121,7 +121,7 @@ $("[colourchangeback]").each(function (index) {
       duration: 1
     },
     {
-      backgroundColor: "#ffff",
+      backgroundColor: "#ffffff",
       duration: 1
     }
   );
