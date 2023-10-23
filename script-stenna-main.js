@@ -72,7 +72,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
 // Dark to Light Color Change
 $(".is-bg").each(function (index) {
   let triggerElement = $(this);
-  let targetElement = $("body");
+  let targetElement = $(this);
 
   let tl = gsap.timeline({
     scrollTrigger: {
