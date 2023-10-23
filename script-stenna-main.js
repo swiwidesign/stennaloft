@@ -69,47 +69,6 @@ window.addEventListener("DOMContentLoaded", (event) => {
     
 
     
-$("[colourchange]").each(function (index, trigger) {
-  gsap.fromTo(".page_wrap", {
-    scrollTrigger: {
-      scrub: true,
-      markers: false,
-      trigger: trigger, // Use the current trigger element
-      start: "top bottom",
-      end: "bottom bottom"
-    },
-    backgroundColor: "#ffff", // Starting color (change to the desired initial color)
-    duration: 1
-  }, {
-    backgroundColor: "#ccd1b2", // Ending color
-    duration: 1
-  });
-    
-    
-    
-    
-});
-
-// Dark to Light Color Change
-$("[colourchangeback]").each(function (index, trigger) {
-  gsap.fromTo(".page_wrap", {
-    scrollTrigger: {
-      scrub: true,
-      markers: false,
-      trigger: trigger, // Use the current trigger element
-      start: "top center",
-      end: "top top"
-    },
-    backgroundColor: "#ccd1b2", // Starting color (change to the desired initial color)
-    duration: 1
-  }, {
-    backgroundColor: "#ffff", // Ending color
-    duration: 1
-  });
-});
-
-    
-    
     $("[colourchange]").each(function (index) {
   let triggerElement = $(this);
   let targetElement = $("body");
