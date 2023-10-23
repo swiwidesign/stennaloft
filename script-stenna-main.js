@@ -77,6 +77,18 @@ window.addEventListener("DOMContentLoaded", (event) => {
         backgroundColor: "red",
         duration: 1
     });
+    
+    gsap.to(".page_wrap", {
+        scrollTrigger: {
+            scrub: true,
+            markers: false,
+            trigger: "[colourchange]",
+            start: "bottom center", 
+            end: "bottom top"
+        },
+        backgroundColor: "green",
+        duration: 1
+    });
 
   
 });
