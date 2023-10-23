@@ -67,71 +67,42 @@ window.addEventListener("DOMContentLoaded", (event) => {
     });
     
     
-    
-    
-    
-    
+
 // Dark to Light Color Change
-$("[colourchange]").each(function (index) {
-  let triggerElement = $(this);
-  let targetElement = $("body");
-
-  let tl = gsap.timeline({
+$("[colourchange]").each(function (index, trigger) {
+  gsap.fromTo("body", {
     scrollTrigger: {
-      trigger: triggerElement,
-      // trigger element - viewport
-      // can also use "20px 80%"
+      scrub: true,
+      markers: false,
+      trigger: trigger, // Use the current trigger element
       start: "top bottom",
-      end: "bottom bottom",
-      scrub: 1
-    }
-  });
-  tl.fromTo(
-    targetElement,
-    {
-      backgroundColor: "#fffcfc",
-      duration: 1
+      end: "top top"
     },
-    {
-      backgroundColor: "#ccd1b2",
-      duration: 1
-    }
-  );
+    backgroundColor: "#ffffff", // Starting color (change to the desired initial color)
+    duration: 1
+  }, {
+    backgroundColor: "#ccd1b2", // Ending color
+    duration: 1
+  });
 });
     
-    // Dark to Light Color Change
-$("[colourchangeback]").each(function (index) {
-  let triggerElement = $(this);
-  let targetElement = $("body");
-
-  let tl = gsap.timeline({
+    $("[colourchangeback]").each(function (index, trigger) {
+  gsap.fromTo("body", {
     scrollTrigger: {
-      trigger: triggerElement,
-      // trigger element - viewport
-      // can also use "20px 80%"
+      scrub: true,
+      markers: false,
+      trigger: trigger, // Use the current trigger element
       start: "top bottom",
-      end: "top center",
-      scrub: 1
-    }
-  });
-  tl.fromTo(
-    targetElement,
-    {
-      backgroundColor: "#ccd1b2",
-      duration: 1
+      end: "top top"
     },
-    {
-      backgroundColor: "#fffcfc",
-      duration: 1
-    }
-  );
+    backgroundColor: "#ccd1b2", // Starting color (change to the desired initial color)
+    duration: 1
+  }, {
+    backgroundColor: "#ffffff", // Ending color
+    duration: 1
+  });
 });
-    
 
-    
-    
-    
-    
     
     
 
