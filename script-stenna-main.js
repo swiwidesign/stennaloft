@@ -95,7 +95,7 @@ $("[colourchangeback]").each(function (index, trigger) {
     duration: 1
   });
 });
-});
+
     
     
 
