@@ -66,29 +66,36 @@ window.addEventListener("DOMContentLoaded", (event) => {
         duration: 1
     });
     
-     gsap.to(".page_wrap", {
-        scrollTrigger: {
-            scrub: true,
-            markers: false,
-            trigger: "[colourchange]",
-            start: "top bottom", 
-            end: "bottom bottom"
-        },
-        backgroundColor: "#ccd1b2",
-        duration: 1
-    });
-    
-    gsap.to(".page_wrap", {
-        scrollTrigger: {
-            scrub: true,
-            markers: false,
-            trigger: "[colourchange]",
-            start: "bottom center", 
-            end: "bottom top"
-        },
-        backgroundColor: "white",
-        duration: 1
-    });
+    // Define an array of trigger elements with the class "colourchange"
+const triggers = document.querySelectorAll("[colourchange]");
+
+// Loop through each trigger element
+triggers.forEach((trigger) => {
+  // Define the GSAP animation for each trigger
+  gsap.to(".page_wrap", {
+    scrollTrigger: {
+      scrub: true,
+      markers: false,
+      trigger: trigger, // Use the current trigger element
+      start: "top bottom",
+      end: "bottom bottom",
+    },
+    backgroundColor: "#ccd1b2",
+    duration: 1,
+  });
+
+  gsap.to(".page_wrap", {
+    scrollTrigger: {
+      scrub: true,
+      markers: false,
+      trigger: trigger, // Use the current trigger element
+      start: "bottom center",
+      end: "bottom top",
+    },
+    backgroundColor: "white",
+    duration: 1,
+  });
+});
 
   
 });
