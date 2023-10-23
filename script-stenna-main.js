@@ -11,7 +11,8 @@ window.addEventListener("DOMContentLoaded", (event) => {
       infinite: false,
       gestureOrientation: "vertical",
       normalizeWheel: false,
-      smoothTouch: false
+      smoothTouch: false,
+        resize: true
     });
 
     function raf(time) {
