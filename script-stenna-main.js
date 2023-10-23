@@ -68,35 +68,64 @@ window.addEventListener("DOMContentLoaded", (event) => {
     
     
 
-    
-$("[colourchange]").each(function (index, trigger) {
-  gsap.to("body", {
-    scrollTrigger: {
-      scrub: true,
-      markers: false,
-      trigger: trigger, // Use the current trigger element
-      start: "top bottom",
-      end: "bottom bottom"
-    },
-    backgroundColor: "#ccd1b2",
-    duration: 1
-  });
-});
-
+    gsap.set("body", { backgroundColor: "#ffffff" });
 // Dark to Light Color Change
-$("[colourchangeback]").each(function (index, backtrigger) {
-  gsap.fromTo("body", {
+$("[colourchange]").each(function (index) {
+  let triggerElement = $(this);
+  let targetElement = $("body");
+
+  let tl = gsap.timeline({
     scrollTrigger: {
-      scrub: true,
-      markers: false,
-      trigger: backtrigger, // Use the current trigger element
-      start: "top center",
-      end: "top top"
+      trigger: triggerElement,
+      // trigger element - viewport
+      // can also use "20px 80%"
+      start: "top bottom",
+      end: "bottom bottom",
+      scrub: 1
+    }
+  });
+  tl.fromTo(
+    targetElement,
+    {
+      backgroundColor: "#ffffff",
+      duration: 1
     },
-    backgroundColor: "#ccd1b2",
-    duration: 1
-  }, { backgroundColor: "#ffffff", duration: 1 });
+    {
+      backgroundColor: "#ccd1b2",
+      duration: 1
+    }
+  );
 });
+    
+    // Dark to Light Color Change
+$("[colourchangeback]").each(function (index) {
+  let triggerElement = $(this);
+  let targetElement = $("body");
+
+  let tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: triggerElement,
+      // trigger element - viewport
+      // can also use "20px 80%"
+      start: "top bottom",
+      end: "top center",
+      scrub: 1
+    }
+  });
+  tl.fromTo(
+    targetElement,
+    {
+      backgroundColor: "#ccd1b2",
+      duration: 1
+    },
+    {
+      backgroundColor: "#ffffff",
+      duration: 1
+    }
+  );
+});
+    
+
 
     
     
