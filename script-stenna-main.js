@@ -74,12 +74,12 @@ document.querySelectorAll('[colourchange]').forEach(function (triggerElement) {
     scrollTrigger: {
       trigger: triggerElement,
       scrub: true,
-      start: 'top center',
-      end: 'bottom bottom',
+      start: 'clamp(top center)',
+      end: 'clamp(bottom bottom)',
     },
   });
 
-  tl.to('.page_wrap', {
+  tl.to('body', {
     backgroundColor: gsap.getProperty('html', '--color--prime'),
   });
 });
@@ -89,12 +89,12 @@ document.querySelectorAll('[colourchange]').forEach(function (triggerElement) {
     scrollTrigger: {
       trigger: triggerElement,
       scrub: true,
-      start: 'bottom 75%',
-      end: 'bottom 25%',
+      start: 'clamp(bottom 75%)',
+      end: 'clamp(bottom 25%)',
     },
   });
 
-  tl.to('.page_wrap', {
+  tl.to('body', {
     backgroundColor: gsap.getProperty('html', '--color--light'),
   });
 });
