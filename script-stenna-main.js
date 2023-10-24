@@ -89,8 +89,8 @@ document.querySelectorAll('[colourchange]').forEach(function (triggerElement) {
     scrollTrigger: {
       trigger: triggerElement,
       scrub: true,
-      start: 'bottom center',
-      end: 'bottom top',
+      start: 'bottom 75%',
+      end: 'bottom 25%',
     },
   });
 
