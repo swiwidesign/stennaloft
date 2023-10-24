@@ -84,10 +84,10 @@ document.querySelectorAll("[colourchange]").forEach(function (triggerElement) {
   });
 });
 
-document.querySelectorAll("[colourchangeback]").forEach(function (triggerElement) {
-  let tl = gsap.timeline({
+
+  let tlback = gsap.timeline({
     scrollTrigger: {
-      trigger: triggerElement,
+      trigger: "[colourchangeback]",
       scrub: true,
       start: "clamp(bottom 75%)",
       end: "clamp(bottom 25%)",
@@ -97,7 +97,7 @@ document.querySelectorAll("[colourchangeback]").forEach(function (triggerElement
   tl.to("body", {
     backgroundColor: gsap.getProperty("html", "--color--light"),
   });
-});
+
   
 
      // about links hover
