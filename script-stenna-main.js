@@ -56,7 +56,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
   // Arrow
 gsap.to(".arrow-down", {
   scrollTrigger: {
-    scrub: true,
+    scrub: 1,
     markers: false,
     trigger: ".is-footer",
     start: "center bottom", // when the top of the trigger hits the top of the viewport
