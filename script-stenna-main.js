@@ -68,7 +68,7 @@ gsap.to(".arrow-down", {
 
  
    
-
+  // colour change
 document.querySelectorAll('[colourchange]').forEach(function (triggerElement) {
   let tl = gsap.timeline({
     scrollTrigger: {
@@ -100,5 +100,35 @@ document.querySelectorAll('[colourchangeback]').forEach(function (triggerElement
 });
   
 
+     // about links hover
+$("[imagechange]").each(function (index) {
+  let sectionHeading = $(this).find(".about_heading");
+  let sectionSpans = $(this).find(".about_span");
+  let sectionItems = $(this).find(".about_item");
+
+  sectionSpans.each(function (index) {
+    let relatedImages = sectionItems.eq(index).find(".about_image");
+    let otherSpans = sectionSpans.not($(this));
+
+    gsap.matchMedia().add("(min-width: 992px)", () => {
+      let tl = gsap.timeline({ paused: true, defaults: { duration: 0.2 } });
+      tl.set($(this), { zIndex: 3 });
+      tl.to(relatedImages, { opacity: 1, scale: 1, ease: "power4.out" });
+      tl.fromTo(sectionHeading, { color: "white" }, { color: "rgba(255, 255, 255, 0.2)" }, "<");
+      tl.fromTo(otherSpans, { color: "#C6FB50" }, { color: "rgba(255, 255, 255, 0.2)" }, "<");
+
+      $(this).on("mouseenter", function () {
+        tl.timeScale(1);
+        tl.play();
+      });
+      $(this).on("mouseleave", function () {
+        tl.timeScale(2);
+        tl.reverse();
+      });
+    });
+  });
+});    
+    
+    
   
 });
