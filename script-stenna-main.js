@@ -114,7 +114,7 @@ $("[imagechange]").each(function (index) {
       let tl = gsap.timeline({ paused: true, defaults: { duration: 0.4 } });
       tl.set($(this), { zIndex: 3 });
       tl.to(otherSpans, { zIndex: 1 }, "<");
-      tl.to(relatedImages, { opacity: 1, scale: 1, ease: "power4.out" }, "<");
+      tl.to(relatedImages, { opacity: 1, scale: 1, ease: "power4.out" });
       
 
 
