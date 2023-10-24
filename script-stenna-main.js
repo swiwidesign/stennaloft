@@ -114,8 +114,6 @@ $("[imagechange]").each(function (index) {
       let tl = gsap.timeline({ paused: true, defaults: { duration: 0.2 } });
       tl.set($(this), { zIndex: 3 });
       tl.to(relatedImages, { opacity: 1, scale: 1, ease: "power4.out" });
-      tl.fromTo(sectionHeading, { color: "white" }, { color: "rgba(255, 255, 255, 0.2)" }, "<");
-      tl.fromTo(otherSpans, { color: "#C6FB50" }, { color: "rgba(255, 255, 255, 0.2)" }, "<");
 
       $(this).on("mouseenter", function () {
         tl.timeScale(1);
