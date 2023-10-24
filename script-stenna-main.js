@@ -111,7 +111,7 @@ $("[imagechange]").each(function (index) {
     let otherSpans = sectionSpans.not($(this));
 
     gsap.matchMedia().add("(min-width: 992px)", () => {
-      let tl = gsap.timeline({ paused: true, defaults: { duration: 0.2 } });
+      let tl = gsap.timeline({ paused: true, defaults: { duration: 0.4 } });
       tl.set($(this), { zIndex: 3 });
       tl.to(otherSpans, { zIndex: 1 }, "<");
       tl.to(relatedImages, { opacity: 1, scale: 1, ease: "power4.out" }, "<");
