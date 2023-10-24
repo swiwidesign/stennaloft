@@ -61,6 +61,7 @@ gsap.to(".arrow-down", {
     trigger: ".is-footer",
     start: "center bottom", // when the top of the trigger hits the top of the viewport
     end: "clamp(bottom bottom)",
+    },
   rotate: 180,
   duration: 1,
 });
