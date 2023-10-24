@@ -79,7 +79,7 @@ document.querySelectorAll("[colourchange]").forEach(function (triggerElement) {
     },
   });
 
-  tl.to(".page_wrap", {
+  tl.to("body", {
     backgroundColor: gsap.getProperty("html", "--color--prime"),
   });
 });
@@ -89,12 +89,12 @@ document.querySelectorAll("[colourchangeback]").forEach(function (triggerElement
     scrollTrigger: {
       trigger: triggerElement,
       scrub: true,
-      start: "clamp(top bottom)",
-      end: "clamp(top center)",
+      start: "clamp(bottom 75%)",
+      end: "clamp(bottom 25%)",
     },
   });
 
-  tl.to(".page_wrap", {
+  tl.to("body", {
     backgroundColor: gsap.getProperty("html", "--color--light"),
   });
 });
