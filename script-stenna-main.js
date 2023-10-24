@@ -94,7 +94,7 @@ document.querySelectorAll("[colourchange]").forEach(function (triggerElement) {
     },
   });
 
-  tl.to("body", {
+  tlback.to("body", {
     backgroundColor: gsap.getProperty("html", "--color--light"),
   });
 
