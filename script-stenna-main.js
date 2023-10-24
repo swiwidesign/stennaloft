@@ -84,13 +84,13 @@ document.querySelectorAll("[colourchange]").forEach(function (triggerElement) {
   });
 });
 
-document.querySelectorAll("[colourchange]").forEach(function (triggerElement) {
+document.querySelectorAll("[colourchangeback]").forEach(function (triggerElement) {
   let tl = gsap.timeline({
     scrollTrigger: {
       trigger: triggerElement,
       scrub: true,
-      start: "clamp(bottom 75%)",
-      end: "clamp(bottom 25%)",
+      start: "clamp(top bottom)",
+      end: "clamp(top center)",
     },
   });
 
