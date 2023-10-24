@@ -74,7 +74,7 @@ document.querySelectorAll("[colourchange]").forEach(function (triggerElement) {
     scrollTrigger: {
       trigger: triggerElement,
       scrub: true,
-      start: "top center",
+      start: "clamp(top center)",
       end: "clamp(bottom bottom)",
     },
   });
@@ -89,7 +89,7 @@ document.querySelectorAll("[colourchange]").forEach(function (triggerElement) {
     scrollTrigger: {
       trigger: triggerElement,
       scrub: true,
-      start: "bottom 75%",
+      start: "clamp(bottom 75%)",
       end: "clamp(bottom 25%)",
     },
   });
