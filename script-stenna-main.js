@@ -75,7 +75,7 @@ document.querySelectorAll("[colourchange]").forEach(function (triggerElement) {
       trigger: triggerElement,
       scrub: true,
       start: "clamp(top center)",
-      end: "clamp(bottom bottom)",
+      end: "clamp(bottom 101%)",
     },
   });
 
@@ -87,7 +87,7 @@ document.querySelectorAll("[colourchange]").forEach(function (triggerElement) {
 
   let tlback = gsap.timeline({
     scrollTrigger: {
-      trigger: "#about",
+      trigger: "[colourchangeback]",
       scrub: true,
       start: "clamp(bottom 75%)",
       end: "clamp(bottom 25%)",
