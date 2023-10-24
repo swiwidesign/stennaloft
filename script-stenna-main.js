@@ -73,7 +73,7 @@ document.querySelectorAll("[colourchange]").forEach(function (triggerElement) {
   let tl = gsap.timeline({
     scrollTrigger: {
       trigger: triggerElement,
-      scrub: true,
+      scrub: false,
       start: "top center",
       end: "bottom bottom",
     },
@@ -88,7 +88,7 @@ document.querySelectorAll("[colourchangeback]").forEach(function (triggerElement
   let tl = gsap.timeline({
     scrollTrigger: {
       trigger: triggerElement,
-      scrub: true,
+      scrub: false,
       start: "bottom 75%",
       end: "bottom 25%",
     },
