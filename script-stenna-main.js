@@ -69,33 +69,33 @@ gsap.to(".arrow-down", {
  
    
   // colour change
-document.querySelectorAll("[colourchange]").forEach(function (triggerElement) {
+document.querySelectorAll('[colourchange]').forEach(function (triggerElement) {
   let tl = gsap.timeline({
     scrollTrigger: {
       trigger: triggerElement,
       scrub: true,
-      start: "top center",
-      end: "bottom bottom",
+      start: 'top center',
+      end: 'bottom bottom',
     },
   });
 
-  tl.to("body", {
-    backgroundColor: gsap.getProperty("html", "--color--prime"),
+  tl.to('body', {
+    backgroundColor: gsap.getProperty('html', '--color--prime'),
   });
 });
 
-document.querySelectorAll("[colourchange]").forEach(function (triggerElement) {
+document.querySelectorAll('[colourchange]').forEach(function (triggerElement) {
   let tl = gsap.timeline({
     scrollTrigger: {
       trigger: triggerElement,
       scrub: true,
-      start: "clamp(bottom 75%)",
-      end: "clamp(bottom 25%)",
+      start: 'bottom 75%',
+      end: 'bottom 25%',
     },
   });
 
-  tl.to("body", {
-    backgroundColor: gsap.getProperty("html", "--color--light"),
+  tl.to('body', {
+    backgroundColor: gsap.getProperty('html', '--color--light'),
   });
 });
   
