@@ -29,6 +29,7 @@ $(document).ready(function () {
                     clipPath: "polygon(50% 50%, 50% 50%, 50% 50%, 50% 50% )",
                 }, {
                     clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
+                    duration: 1.4,
                     onComplete: () => {
                         window.location = destination;
                     }
