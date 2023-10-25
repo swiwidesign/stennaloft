@@ -53,6 +53,18 @@ window.addEventListener("DOMContentLoaded", (event) => {
 
 
     // GENERAL CODE
+
+
+    // Hero Images
+    gsap.from(".hero_image", {
+        scale: 0,
+        delay: 1,
+        stagger: 0.2,
+    });
+
+
+
+
     // Arrow
     gsap.to(".arrow-down", {
         scrollTrigger: {
@@ -68,7 +80,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
 
 
 
-    // colour change
+    // Colour Change
     document.querySelectorAll("[colourchange]").forEach(function (triggerElement) {
         let tl = gsap.timeline({
             scrollTrigger: {
@@ -87,7 +99,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
     });
 
 
-    // about links hover
+    // About Links Hover
     $("[imagechange]").each(function (index) {
         let sectionHeading = $(this).find(".about_heading");
         let sectionSpans = $(this).find(".about_span");
