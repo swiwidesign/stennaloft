@@ -62,7 +62,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
         clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
         delay: 0,
         stagger: 0.6,
-        ease: "power2.inOut",
+        ease: "power3.inOut",
 
     });
 
@@ -93,7 +93,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
                 end: "bottom 75%",
                 toggleActions: "restart reverse restart reverse",
                 duration: 0.6,
-                ease: "power2.out",
+                ease: "power1.out",
             },
         });
 
@@ -129,7 +129,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
                 tl.to(relatedImages, {
                     opacity: 1,
                     scale: 1,
-                    ease: "power2.out"
+                    ease: "power3.out"
                 });
 
 
