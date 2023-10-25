@@ -73,9 +73,9 @@ document.querySelectorAll("[colourchange]").forEach(function (triggerElement) {
   let tl = gsap.timeline({
     scrollTrigger: {
       trigger: triggerElement,
-      scrub: false,
       start: "top center",
       end: "bottom bottom",
+      toggleActions: "restart reverse none none",
     },
   });
 
@@ -84,21 +84,6 @@ document.querySelectorAll("[colourchange]").forEach(function (triggerElement) {
   });
 });
 
-document.querySelectorAll("[colourchangeback]").forEach(function (triggerElement) {
-  let tl = gsap.timeline({
-    scrollTrigger: {
-      trigger: triggerElement,
-      scrub: false,
-      start: "bottom 75%",
-      end: "bottom 25%",
-    },
-  });
-
-  tl.to("body", {
-    backgroundColor: gsap.getProperty("html", "--color--light"),
-  });
-});
-  
 
      // about links hover
 $("[imagechange]").each(function (index) {
