@@ -65,7 +65,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
         stagger: 0.8,
         duration: 1.2,
         rotation: 0,
-        ease: "none",
+        ease: "power1.out",
 
     });
 
