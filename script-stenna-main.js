@@ -60,9 +60,9 @@ window.addEventListener("DOMContentLoaded", (event) => {
         transformOrigin: "50% 100%"
     });
     gsap.fromTo(".hero_image", {
-        clipPath: 'square(0%)',
+        clipPath: "polygon(0 100%, 100% 100%, 100% 100%, 0% 100%)",
     }, {
-        clipPath: 'square(100%)',
+        clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)",
         delay: 0,
         stagger: 0.8,
     });
