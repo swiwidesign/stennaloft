@@ -57,7 +57,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
 
     // Hero Images
     gsap.fromTo(".hero_image", {
-        clipPath: "polygon(50% 100%, 50% 100%, 100% 100%, 0% 100%)",
+        clipPath: "polygon(0% 100%, 100% 100%, 100% 100%, 0% 100% )",
     }, {
         clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
         delay: 0,
