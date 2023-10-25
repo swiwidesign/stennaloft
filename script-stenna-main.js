@@ -64,6 +64,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
         stagger: {
             each: 0.4,
         },
+        ease: "expoScale(0.5,7,none)",
 
     });
 
