@@ -54,17 +54,27 @@ window.addEventListener("DOMContentLoaded", (event) => {
 
     // GENERAL CODE
 
-
+    //Hero Loader
     // Hero Images
-    gsap.fromTo(".hero_image", {
-        clipPath: "polygon(0% 100%, 100% 100%, 100% 100%, 0% 100% )",
-    }, {
-        clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
-        delay: 0,
-        stagger: 0.6,
-        ease: "power2.inOut",
 
+    let tlintro = gsap.timeline({
+        defaults: {
+            ease: "power2.inOut"
+        }
     });
+
+    tlintro.fromTo(".hero_image", {
+            clipPath: "polygon(0% 100%, 100% 100%, 100% 100%, 0% 100% )",
+        }, {
+            clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
+            delay: 0,
+            stagger: 0.6,
+
+        })
+        .from(".heading-large", {
+            yPercent: -100,
+            duration: 1
+        });
 
 
 
