@@ -73,9 +73,10 @@ document.querySelectorAll("[colourchange]").forEach(function (triggerElement) {
   let tl = gsap.timeline({
     scrollTrigger: {
       trigger: triggerElement,
-      start: "top center",
-      end: "bottom bottom",
+      start: "top 25%",
+      end: "bottom 75%",
       toggleActions: "restart reverse restart reverse",
+        duration: 0.4,
     },
   });
 
