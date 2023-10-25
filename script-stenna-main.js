@@ -58,8 +58,8 @@ window.addEventListener("DOMContentLoaded", (event) => {
     // Hero Images
     gsap.from(".hero_image", {
         scale: 0,
-        delay: 1,
-        stagger: 0.2,
+        delay: 0.2,
+        stagger: 0.4,
     });
 
 
