@@ -120,7 +120,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
                 let tl = gsap.timeline({
                     paused: true,
                     defaults: {
-                        duration: 0.2
+                        duration: 0.4
                     }
                 });
                 tl.set($(this), {
@@ -132,7 +132,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
                 tl.to(relatedImages, {
                     opacity: 1,
                     scale: 1,
-                    ease: "power3.out"
+                    ease: "power1.out"
                 });
 
 
