@@ -60,11 +60,11 @@ window.addEventListener("DOMContentLoaded", (event) => {
         clipPath: "polygon(50% 50%, 50% 50%, 50% 50%, 50% 50% )",
     }, {
         clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
-        delay: 0,
+        delay: 0.3,
         stagger: {
             // wrap advanced options in an object
             amount: 2,
-            ease: "sine.in"
+            ease: "power1.out"
         },
 
     });
