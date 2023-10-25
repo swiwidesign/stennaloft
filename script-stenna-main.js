@@ -59,10 +59,13 @@ window.addEventListener("DOMContentLoaded", (event) => {
     gsap.set(".hero_image", {
         transformOrigin: "50% 100%"
     });
-    gsap.from(".hero_image", {
-        scale: 0,
-        delay: 0.2,
+    gsap.fromTo(".hero_image", {
+        clipPath: 'circle(100%)',
+    }, {
+        clipPath: 'circle(0%)',
+        delay: 0,
         stagger: 0.4,
+        ease: "power4.out",
     });
 
 
