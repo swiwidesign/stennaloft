@@ -75,7 +75,7 @@ document.querySelectorAll("[colourchange]").forEach(function (triggerElement) {
       trigger: triggerElement,
       start: "top center",
       end: "bottom bottom",
-      toggleActions: "restart reverse none none",
+      toggleActions: "restart reverse reverse restart",
     },
   });
 
