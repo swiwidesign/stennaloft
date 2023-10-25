@@ -72,7 +72,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
 
         })
         .from(".heading-large", {
-            yPercent: -100,
+            yPercent: 100,
             duration: 1
         });
 
