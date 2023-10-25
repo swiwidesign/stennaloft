@@ -89,8 +89,8 @@ window.addEventListener("DOMContentLoaded", (event) => {
         let tl = gsap.timeline({
             scrollTrigger: {
                 trigger: triggerElement,
-                start: "top 25%",
-                end: "bottom 75%",
+                start: "top bottom",
+                end: "bottom center",
                 toggleActions: "restart reverse restart reverse",
                 duration: 0.4,
                 ease: "power4.out",
