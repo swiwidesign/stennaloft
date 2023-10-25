@@ -63,7 +63,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
         delay: 0.2,
         stagger: {
             amount: 3,
-            ease: "power1.out",
+            ease: "power1.in",
         },
         ease: "power1.out",
 
