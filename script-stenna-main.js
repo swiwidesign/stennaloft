@@ -63,7 +63,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
         delay: 0.2,
         stagger: {
             amount: 3,
-            ease: "circ.in"
+            ease: "expoScale(0.5,7, none)"
         },
 
     });
