@@ -64,10 +64,9 @@ window.addEventListener("DOMContentLoaded", (event) => {
         stagger: {
             // wrap advanced options in an object
             each: 0.8,
-            ease: "power2.inOut",
+            ease: "power3.out",
         },
         duration: 1.2,
-        ease: "power1.out",
 
     });
 
