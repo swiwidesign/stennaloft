@@ -63,7 +63,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
         delay: 0.2,
         stagger: {
             // wrap advanced options in an object
-            amount: 2,
+            amount: 3,
             ease: "sine.out"
         },
 
