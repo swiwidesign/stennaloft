@@ -62,7 +62,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
         clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
         delay: 0,
         stagger: 0.7,
-        ease: "power1.inOut",
+        ease: "power2.inOut",
 
     });
 
@@ -89,11 +89,11 @@ window.addEventListener("DOMContentLoaded", (event) => {
         let tl = gsap.timeline({
             scrollTrigger: {
                 trigger: triggerElement,
-                start: "top bottom",
-                end: "bottom center",
+                start: "top 25%",
+                end: "bottom 75%",
                 toggleActions: "restart reverse restart reverse",
-                duration: 0.4,
-                ease: "power4.out",
+                duration: 0.6,
+                ease: "power2.out",
             },
         });
 
@@ -129,7 +129,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
                 tl.to(relatedImages, {
                     opacity: 1,
                     scale: 1,
-                    ease: "power4.out"
+                    ease: "power2.out"
                 });
 
 
