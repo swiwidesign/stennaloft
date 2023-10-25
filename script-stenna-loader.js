@@ -3,7 +3,7 @@
 window.onload = function () {
     gsap.to(".loader", {
         clipPath: "polygon(50% 50%, 50% 50%, 50% 50%, 50% 50% )",
-        duration: 1,
+        duration: 1.4,
         onComplete: () => {
             gsap.set(".loader", {
                 display: "none"
