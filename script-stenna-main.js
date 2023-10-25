@@ -62,8 +62,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
         clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
         delay: 0.2,
         stagger: {
-            each: 0.2,
-            ease: "sine.inOut"
+            each: 0.4,
         },
 
     });
