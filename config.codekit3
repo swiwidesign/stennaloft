@@ -9,49 +9,19 @@
 	],
 "creatorBuild": "32001",
 "files": {
-	"/_OLD/23102023_v1script-stenna-main copy.js": {
-		"bF": 0,
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "/_OLD/23102023_v1script-stenna-main copy-min.js",
-		"oF": 0,
-		"sC": 3,
-		"tS": 0
+	"/_OLD": {
+		"ft": 65536,
+		"oA": 1,
+		"oAP": "/build/_OLD",
+		"oF": 0
 		},
-	"/_OLD/23102023_v2script-stenna-main copy.js": {
-		"bF": 0,
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
+	"/build/.gitignore": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
 		"oA": 0,
-		"oAP": "/_OLD/23102023_v2script-stenna-main copy-min.js",
-		"oF": 0,
-		"sC": 3,
-		"tS": 0
-		},
-	"/_OLD/25102023_script-stenna-loader.js": {
-		"bF": 0,
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "/_OLD/25102023_script-stenna-loader-min.js",
-		"oF": 0,
-		"sC": 3,
-		"tS": 0
-		},
-	"/_OLD/25102023_script-stenna-main.js": {
-		"bF": 0,
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "/_OLD/25102023_script-stenna-main-min.js",
-		"oF": 0,
-		"sC": 3,
-		"tS": 0
+		"oAP": "/build/.gitignore",
+		"oF": 0
 		},
 	"/script-stenna-loader-min.js": {
 		"bF": 0,
@@ -2224,7 +2194,7 @@
 	"rollupExternals": "",
 	"rollupReplacements": "process.env.NODE_ENV:::$NODE_ENV,,,ENVIRONMENT:::$NODE_ENV",
 	"rollupTreeshakingEnabled": 1,
-	"skippedFoldersString": "log, _logs, logs, _cache, cache, .idea, /storage/framework/sessions, node_modules",
+	"skippedFoldersString": "log, _logs, logs, _cache, cache, .idea, /storage/framework/sessions, node_modules, /_old",
 	"sourceFolderName": "source",
 	"susyVersion": 3,
 	"tsAllowSyntheticDefaultImports": 0,
