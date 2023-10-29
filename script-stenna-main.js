@@ -88,7 +88,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
 
     // Colour Change
     document.querySelectorAll("[colourchange]").forEach(function (triggerElement) {
-        let tl = gsap.timeline({
+        let tlcolour = gsap.timeline({
             scrollTrigger: {
                 trigger: triggerElement,
                 start: "top 25%",
@@ -99,7 +99,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
             },
         });
 
-        tl.to("body", {
+        tlcolour.to("body", {
             backgroundColor: gsap.getProperty("html", "--color--prime"),
         });
     });
@@ -116,19 +116,17 @@ window.addEventListener("DOMContentLoaded", (event) => {
             let otherSpans = sectionSpans.not($(this));
 
             gsap.matchMedia().add("(min-width: 992px)", () => {
-                let tl = gsap.timeline({
+                let tlimage = gsap.timeline({
                     paused: true,
                     defaults: {
                         duration: 0.4
                     }
                 });
-                tl.set($(this), {
+                tlimage.to($(this), {
                     zIndex: 3
-                });
-                tl.to(otherSpans, {
+                }).to(otherSpans, {
                     zIndex: 1
-                });
-                tl.to(relatedImages, {
+                }, "<").to(relatedImages, {
                     opacity: 1,
                     scale: 1,
                     ease: "power1.out"
@@ -137,12 +135,12 @@ window.addEventListener("DOMContentLoaded", (event) => {
 
 
                 $(this).on("mouseenter", function () {
-                    tl.timeScale(1);
-                    tl.play();
+                    tlimage.timeScale(1);
+                    tlimage.play();
                 });
                 $(this).on("mouseleave", function () {
-                    tl.timeScale(2);
-                    tl.reverse();
+                    tlimage.timeScale(2);
+                    tlimage.reverse();
                 });
             });
         });

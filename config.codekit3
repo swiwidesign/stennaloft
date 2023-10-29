@@ -105,7 +105,7 @@
     "lastBuiltDate" : 720025771.55951703
   },
   "projectSettings" : {
-    "abortBuildOnError" : 1,
+    "abortBuildOnError" : 0,
     "allowInjectionReloads" : 1,
     "alwaysUseExternalServer" : 0,
     "animateCSSInjections" : 1,
