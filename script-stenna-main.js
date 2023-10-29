@@ -125,7 +125,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
                 tl.set($(this), {
                     zIndex: 3
                 });
-                tl.set(otherSpans, {
+                tl.to(otherSpans, {
                     zIndex: 1
                 }, "<");
                 tl.to(relatedImages, {
