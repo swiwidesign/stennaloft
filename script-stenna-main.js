@@ -127,12 +127,12 @@ window.addEventListener("DOMContentLoaded", (event) => {
                 });
                 tl.to(otherSpans, {
                     zIndex: 1
-                }, "<");
+                });
                 tl.to(relatedImages, {
                     opacity: 1,
                     scale: 1,
                     ease: "power1.out"
-                });
+                }, "<");
 
 
 
