@@ -42,7 +42,7 @@
       "oA" : 0,
       "oAP" : "\/script-stenna-loader-min.js",
       "oF" : 0,
-      "sC" : 3,
+      "sC" : 0,
       "tS" : 0
     },
     "\/script-stenna-main-min.js" : {
@@ -57,14 +57,14 @@
       "tS" : 0
     },
     "\/script-stenna-main.js" : {
-      "bF" : 0,
+      "bF" : 4,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
       "oA" : 0,
       "oAP" : "\/script-stenna-main-min.js",
       "oF" : 0,
-      "sC" : 3,
+      "sC" : 0,
       "tS" : 0
     },
     "\/script-stenna-min.js" : {
@@ -86,7 +86,7 @@
       "oA" : 0,
       "oAP" : "\/script-stenna-min.js",
       "oF" : 0,
-      "sC" : 3,
+      "sC" : 0,
       "tS" : 0
     }
   },
