@@ -29,7 +29,7 @@ $(document).ready(function () {
                     opacity: 0
                 }, {
                     opacity: 1,
-                    duration: 1,
+                    duration: 0.6,
                     onComplete: () => {
                         window.location = destination;
                     }
