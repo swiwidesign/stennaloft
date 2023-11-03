@@ -3,7 +3,7 @@
 window.onload = function () {
     gsap.to(".loader", {
         opacity: 0,
-        duration: 1.4,
+        duration: 5,
         onComplete: () => {
             gsap.set(".loader", {
                 display: "none"
