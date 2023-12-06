@@ -1,5 +1,5 @@
 window.addEventListener("DOMContentLoaded", (event) => {
-  // LENIS
+  // LENIS Code
   "use strict";
 
   if (Webflow.env("editor") === undefined) {
