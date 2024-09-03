@@ -66,28 +66,6 @@
       "oF" : 0,
       "sC" : 0,
       "tS" : 0
-    },
-    "\/script-stenna-min.js" : {
-      "bF" : 0,
-      "ft" : 64,
-      "ma" : 0,
-      "mi" : 1,
-      "oA" : 0,
-      "oAP" : "\/script-stenna-min-min.js",
-      "oF" : 0,
-      "sC" : 3,
-      "tS" : 0
-    },
-    "\/script-stenna.js" : {
-      "bF" : 0,
-      "ft" : 64,
-      "ma" : 0,
-      "mi" : 1,
-      "oA" : 0,
-      "oAP" : "\/script-stenna-min.js",
-      "oF" : 0,
-      "sC" : 0,
-      "tS" : 0
     }
   },
   "hooks" : [
